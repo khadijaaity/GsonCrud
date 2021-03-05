@@ -4,6 +4,14 @@
   <artifactId>com.netmind.gson</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
+  <distributionManagement>
+	<repository>
+		<id>github</id>
+		<name>GitHub khadijaaity Apache Maven Packages</name>
+		<url>https://maven.pkg.github.com/khadijaaity/GsonCrud</url>
+	</repository>
+</distributionManagement>
+  
   <properties>
   	<maven.compiler.target>1.8</maven.compiler.target>
   	<maven.compiler.source>1.8</maven.compiler.source>
@@ -15,7 +23,6 @@
 	   <artifactId>jsoup</artifactId>
 	   <version>1.13.1</version>
 	</dependency>
-	<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
 	<dependency>
 	    <groupId>com.google.code.gson</groupId>
 	    <artifactId>gson</artifactId>
@@ -31,7 +38,6 @@
       <artifactId>log4j</artifactId>
       <version>1.2.17</version>
   	</dependency>
-  	<!-- https://mvnrepository.com/artifact/junit/junit -->
 	<dependency>
 	    <groupId>junit</groupId>
 	    <artifactId>junit</artifactId>
