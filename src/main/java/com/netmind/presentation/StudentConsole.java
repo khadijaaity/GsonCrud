@@ -64,7 +64,7 @@ public class StudentConsole {
 		System.out.println("Add surname: ");
 		student.setSurname(scanner.nextLine());
 
-		System.out.println("Add data of birth: ");
+		System.out.println("Add data of birth (YYYY-MM-DD): ");
 		student.setDateOfBirth(LocalDate.parse(scanner.nextLine()));
 
 	}
