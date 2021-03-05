@@ -1,7 +1,5 @@
 package com.netmind.dao;
 
-import static org.junit.Assert.fail;
-
 import java.io.IOException;
 
 import org.junit.After;
@@ -39,7 +37,6 @@ public class StudentDaoImplIntegrationTest {
 		Student student = new Student();
 
 		studentDao.add(student);
-		fail("Not yet implemented");
 	}
 
 }
