@@ -2,12 +2,13 @@ package com.netmind.presentation;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 import com.netmind.business.StudentBlImpl;
 import com.netmind.business.contracts.StudentBl;
-import com.netmind.model.EnumStudent;
-import com.netmind.model.Student;
+import com.netmind.common.model.EnumStudent;
+import com.netmind.common.model.Student;
 
 public class StudentConsole {
 
@@ -34,6 +35,7 @@ public class StudentConsole {
 					e.printStackTrace();
 				}
 				break;
+
 			case OLDEST_STUDENT:
 				System.out.println("Oldest Age Student:");
 				break;
@@ -41,6 +43,11 @@ public class StudentConsole {
 			case MEAN_STUDENT:
 				System.out.println("Student age average:");
 				break;
+
+			case EXIT:
+				System.out.println("Good Bye!!");
+				break;
+
 			default:
 				break;
 			}
@@ -64,9 +71,11 @@ public class StudentConsole {
 		System.out.println("Add surname: ");
 		student.setSurname(scanner.nextLine());
 
-		System.out.println("Add data of birth (YYYY-MM-DD): ");
-		student.setDateOfBirth(LocalDate.parse(scanner.nextLine()));
+		System.out.println("Add data of birth (dd-mm-yyyy): ");
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+		LocalDate dateOfBirth = LocalDate.parse(scanner.nextLine(), formatter);
 
+		student.setDateOfBirth(dateOfBirth);
 	}
 
 }
