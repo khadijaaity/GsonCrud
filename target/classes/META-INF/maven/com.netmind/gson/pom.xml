@@ -15,6 +15,7 @@
   <properties>
   	<maven.compiler.target>1.8</maven.compiler.target>
   	<maven.compiler.source>1.8</maven.compiler.source>
+  	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   
   <dependencies>
@@ -44,11 +45,22 @@
 	    <version>4.13.2</version>
 	    <scope>test</scope>
 	</dependency>
-	
+		<dependency>
+		<groupId>pl.pragmatists</groupId>
+	    <artifactId>JUnitParams</artifactId>
+	    <version>1.0.5</version>
+	    <scope>test</scope>
+	</dependency>
+	<dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>2.23.0</version>
+            <scope>test</scope>
+    </dependency>
   </dependencies>
   
   <build>
-    <finalName>netmind-gson</finalName>
+    <finalName>${project.artifactId}-${project.version}</finalName>
     <plugins>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -57,6 +69,7 @@
             <configuration>
                 <source>1.8</source>
                 <target>1.8</target>
+               <encoding>Cp1252</encoding>  
              </configuration>
         </plugin>
         <plugin>

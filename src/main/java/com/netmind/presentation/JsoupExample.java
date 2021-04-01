@@ -10,6 +10,7 @@ import org.jsoup.select.Elements;
 public class JsoupExample {
 
 	public static void main(String[] args) throws IOException {
+		System.out.println(" Imprimpiendo el €");
 		String url = "http://en.wikipedia.org/";
 		print("Fetching %s...", url);
 
